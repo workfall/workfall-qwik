@@ -21,8 +21,8 @@ export const getLocationData = async (search: string, controller?: AbortControll
     const response = await fetch(url, {
         signal: controller?.signal,
         headers: {
-            'X-RapidAPI-Key': 'b4f553c90bmsh592dd8c5885875bp1302a8jsn581b3431b255',
-            'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+            'X-RapidAPI-Key': process.env.RAPID_API_KEY as string,
+            'X-RapidAPI-Host': process.env.RAPID_API_HOST as string
         },
     });
     const data = await response.json();
