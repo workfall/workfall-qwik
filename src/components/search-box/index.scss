@@ -1,0 +1,33 @@
+@import '../../_colors.scss';
+
+h1 {
+  text-align: center;
+}
+
+.search-container {
+  width: 60%;
+  .dropdown {
+    width: 100%;
+    margin-bottom: 10px;
+    z-index: 1;
+    max-height: 300px;
+    .dropdown-select {
+      cursor: pointer;
+      margin: 0;
+      padding: 10px;
+      border: 2px solid $light-gray;
+      border-top: none;
+      &:focus {
+        outline: none;
+        border-color: $light-blue;
+      }
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+
+    &:only-child {
+      border-bottom: none;
+    }
+  }
+}
